@@ -1,0 +1,77 @@
+nav {
+  position: relative;
+  width: 960px;
+  height: 140px;
+  display: flex;
+  padding: 0px;
+  border-bottom: 1px solid gray;
+}
+
+.nav_menu {
+  position: absolute;
+  left:330px;
+  font-size: 20px;
+  top: 30px;
+  width: 330px;
+  line-height: 140px;
+}
+
+.nav_menu a{
+margin-right: 20px;
+}
+
+.nav_title{
+  font-size: 20px;
+  width: 200px;
+  line-height: 140px;
+}
+
+.titleimg img{
+  width: 130px;
+  height: 130px;
+  line-height: 80px;
+  margin-top: 0px;
+}
+
+.nav_search {
+  position: absolute;
+  left:730px;
+  top:30px;
+  line-height: 140px;
+  width: 300px;
+}
+
+.nav_search>input{
+  height:30px;
+}
+
+.nav_member {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 300px;
+  text-align: right;
+  line-height: 100px;
+margin-right: 0px;
+}
+
+.nav_member>a{
+  margin-right: 10px;
+}
+
+.nav_search>button{
+  position: absolute;
+  left: 180px;
+  top: 55px;
+  width: 30px;
+  height: 30px;
+}
+
+.nav_search>button>img{
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right:0px;
+  width: 20px;
+  height: 20px;
+}

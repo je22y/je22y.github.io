@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>뮤지컬 상세페이지</title>
+  <link rel="stylesheet" href="./basic.css">
+  <link rel="stylesheet" href="./nav.css">
+
+
+  <style>
+  
+
+
+    .mus1_po{
+      margin-top: 50px;
+    }
+
+    .depo{
+      width: 180px;
+      height: 240px;
+      border: 1px solid gray;
+    }
+
+    .mulink{
+      width:960px;
+      height: 50px;
+    }
+
+    .mus1{
+      width: 960px;
+      text-align: center;
+    }
+
+    .mus1A{
+      height:380px;
+    }
+
+    .mus1_title{
+      height: 100px;
+    }
+
+    .title_info{
+      height: 50px;
+    }
+
+    .title_info>h3{
+      margin-top: 30px;
+    }
+
+    .title_info>p{
+      padding: 0px;
+    }
+
+    .mus_star{
+      margin-top: 20px;
+    }
+
+    .pre_review>p{
+      width: 960px;
+      height: 30px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      display:inline-block;
+    }
+  
+    .tt{
+      text-align: left;
+      width: 100px;
+    }
+
+    .mus1_info{
+      margin-top: 50px;
+    }
+
+    .info_detail{
+      width: 960px;
+      text-align: right;
+    }
+
+    .mus1_review{
+      margin-top: 50px;
+    }
+
+    .more{
+      width: 960px;
+      text-align: right;
+    }
+
+    footer {
+      width: 960px;
+      height: 50px;
+      border-top: 1px solid gray;
+      padding: 15px
+    }
+
+  </style>
+
+</head>
+<body>
+  <nav>
+    <a href="index.html">
+    <div class="titleimg">
+      <img src="./tickets.png">
+    </div>
+  </a>
+  
+    <div class="nav_title">
+      <h1><a href="index.html">음파 M.P.A</a></h1>
+    </div>
+    <div class="nav_menu">
+      <a href="musical_now.html">뮤지컬</a>
+      <a href="#">연극</a>
+      <a href="#">공연장</a>
+      <a href="#">예매처</a>
+    </div>
+
+
+    <div class="nav_search">
+      <input type="text">
+      <button><img src="./search-interface-symbol.png" alt=""></button>
+    </div>
+
+    <div class="nav_member">
+      <a href="login.html">로그인</a>
+      <a href="member.html">회원가입</a>
+      <a href="mypage.html">마이페이지</a>
+    </div>
+  </nav>
+
+    <div class="mude">
+      <div class="mulink">
+        <h1><a href="musical_now.html">뮤지컬</a></h1>
+      </div>
+
+      <div class="mus1">
+        <div class="mus1A">
+          <div class="mus1_po">
+            <img src="./mus001.jpg" class="depo">
+          </div>
+
+          <div class="mus1_title">
+            <div class="title_info">
+            <h1>뮤지컬제목</h1>
+            <h3>상연기간</h3><br>
+            <p>20xx.xx.xx.~20xx.xx.xx.</p>
+          </div>
+          </div>
+        </div>
+
+        <div class="mus_star">
+          <div class="star_click">
+            ★ ★ ★ ★ ★ 
+          </div>
+          <div class="star_aver">
+            평균 평점  ★n.n(nnnn명 참여)
+          </div>
+        </div>
+
+        <div class="mus1btn">
+          <a href="#" class="heart">♥</a>
+          <a href="#" class="bookmark">북마크아이콘</a>
+          <a href="#" class="write">후기작성버튼</a>
+          <a href="#" class="share">공유아이콘</a>
+        </div>
+      </div>
+
+      <div class="mus1_info">
+        <h2>기본정보</h2>
+        <select id="frequency">
+          <option value="first_mu">초연</option>
+          <option value="second_mu">재연</option>
+          <option value="third_mu">삼연</option>
+        </select>
+
+        <table>
+          <tr>
+            <td class="tt">제작사</td>
+            <td>멀티컴퍼니</td>
+          </tr>
+          
+          <tr>
+            <td class="tt">연출가</td>
+            <td>홍길동</td>
+          </tr>
+
+          <tr>
+            <td class="tt">출연배우</td>
+            <td>OOO역- ㅇㅇㅇ/ㅇㅇㅇ/ㅇㅇㅇ</td>
+          </tr>
+
+          <tr>
+          <td class="tt">넘버</td>
+          <td>hello/bye/seeyoulater/~</td>
+        </tr>
+
+          <tr>
+          <td class="tt">공연시간</td>
+          <td>1부 80분/인터미션 20분/2부 70분 (총170분)</td>
+        </tr>
+        </table>
+        <div class="info_detail">
+        <a href="#">+상세보기</a>
+        </div>
+
+      </div>
+      
+      <div class="mus1_review">
+        <h1><a href="#">후기</a></h1>
+        <select id="range">
+          <option value="current">최신순</option>
+          <option value="thumbs">공감순</option>
+          <option value="good">평점높은순</option>
+          <option value="bad">평점낮은순</option>
+        </select>
+        
+        <div class="preview">
+          <div class="reCurrent">
+            <a href="#">
+             <div class="user_prof"><img src="#"><br/>닉네임</div>
+              <div class="pre_review">
+              <h4>☆n.n</h4><div class="date">20xx.xx.xx.</div>
+              <p>나의 아직 때 것은 자랑처럼 하나에 강아지, 라이너 무성할 버리었습니다. 애기 불러 무성할 아름다운 노루, 없이 가득 하나 까닭입니다. 어머니, 나는 강아지, 둘 시인의 하늘에는 내린 릴케 봅니다. 내 소녀들의 다 덮어 쓸쓸함과 애기 한 있습니다. 내 이제 풀이 듯합니다.</p>
+            </div> </a>
+      
+            
+             <a href="#">
+              <div class="user_prof"><img src="#"><br/>닉네임</div>
+              <div class="pre_review"> 
+              <h4>☆n.n</h4><div class="date">20xx.xx.xx.</div>
+              <p>나의 아직 때 것은 자랑처럼 하나에 강아지, 라이너 무성할 버리었습니다. 애기 불러 무성할 아름다운 노루, 없이 가득 하나 까닭입니다. 어머니, 나는 강아지, 둘 시인의 하늘에는 내린 릴케 봅니다. 내 소녀들의 다 덮어 쓸쓸함과 애기 한 있습니다. 내 이제 풀이 듯합니다.</p>
+            </div> </a>
+      
+            <a href="#">
+              <div class="user_prof"><img src="#"><br/>닉네임</div>
+              <div class="pre_review">
+              <h4>☆n.n</h4><div class="date">20xx.xx.xx.</div>
+              <p>나의 아직 때 것은 자랑처럼 하나에 강아지, 라이너 무성할 버리었습니다. 애기 불러 무성할 아름다운 노루, 없이 가득 하나 까닭입니다. 어머니, 나는 강아지, 둘 시인의 하늘에는 내린 릴케 봅니다. 내 소녀들의 다 덮어 쓸쓸함과 애기 한 있습니다. 내 이제 풀이 듯합니다.</p>
+            </div></a>
+
+            <a href="#">
+              <div class="user_prof"><img src="#"><br/>닉네임</div>
+              <div class="pre_review">
+              <h4>☆n.n</h4><div class="date">20xx.xx.xx.</div>
+              <p>나의 아직 때 것은 자랑처럼 하나에 강아지, 라이너 무성할 버리었습니다. 애기 불러 무성할 아름다운 노루, 없이 가득 하나 까닭입니다. 어머니, 나는 강아지, 둘 시인의 하늘에는 내린 릴케 봅니다. 내 소녀들의 다 덮어 쓸쓸함과 애기 한 있습니다. 내 이제 풀이 듯합니다.</p>
+            </div></a>
+
+            <div class="more">
+              <a href="#">+더보기</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer_info">
+        <ul>
+          <li>
+            <a href="#">공지사항</a>|
+            <a href="#">서비스이용약관</a>|
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li>copyright&copy;2022 by jeyy2</li>
+        </ul>
+      </div>
+    </footer>      
+  
+</body>
+</html>

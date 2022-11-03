@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>뮤지컬</title>
+  <link rel="stylesheet" href="./basic.css">
+  <link rel="stylesheet" href="./nav.css">
+  <style>
+  
+    .rankpo{
+      width: 90px;;
+      height: 120;
+    }
+
+    
+
+    footer {
+      width: 960px;
+      height: 50px;
+      border-top: 1px solid gray;
+      padding: 15px
+    }
+
+    table{
+      width: 960px;
+      height: 700px;
+      background-color: rgb(214, 214, 214);
+    }
+
+    .morebtn{
+      width: 960px;
+      height:20px;
+      text-align: right;
+      margin-bottom: 50px;
+    }
+
+    .muTitle{
+      margin-top: 50px;
+    }
+
+    .tabnavigation{
+      width: 960px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    .tabnavigation ul li{
+      margin-right: 20px;
+      display: inline;
+    }
+
+    .tabnavigation ul li:hover{
+      cursor: pointer;
+    }
+
+    
+
+  </style>
+
+<script>
+  //각 컨테이너의 화면 설정
+  // 첫 번째 페이지 외에는 모두 감추고
+  // 첫 번째 탭을 강조
+  
+  window.onload = function(){
+      
+      //모든 컨테이너에 대해 반복
+     let containers=document.querySelector(".tabcontainer")
+  
+     //요소 보이기 감추기
+     let nav=containers.querySelector(".tabnavigation ul")
+     nav.style.display = "block"
+     
+     // 현재 탭 설정
+    let navitem = containers.querySelector(".tabnavigation ul li")
+    let ident = navitem.id.split("_")[1]
+    navitem.parentNode.setAttribute("data-current",ident)
+    navitem.setAttribute("style","background-color:#f00")
+    
+    let pages = containers.querySelectorAll(".tabpage")
+    for(let i=1; i<pages.length;i++){
+        pages[i].style.display="none"
+    }
+    
+   let tabs=containers.querySelectorAll("tabnavigation ul li")
+   for(let i=0; i< tabs.length;i++){
+       tabs[i].onclick=displayPage
+   }
+      
+  }
+  
+  //탭 클릭
+  function displayPage(){
+      let current=this.parentNode.getAttribute("data-current")
+      document.getElementById("tabnav_"+current).setAttribute("style","background-color:#fff")
+      document.getElementById("tabpage_"+current).style.display="none"
+      
+      let ident = this.id.split("_")[1]  /* 번호 */
+      this.setAttribute("style","background-color:#f00")
+      document.getElementById("tabpage_"+ident).style.display="block"
+      this.parentNode.setAttribute("data-current",ident)
+  }
+  </script>
+
+</head>
+<body>
+  <nav>
+    <a href="index.html">
+    <div class="titleimg">
+      <img src="./tickets.png">
+    </div>
+  </a>
+  
+    <div class="nav_title">
+      <h1><a href="index.html">음파 M.P.A</a></h1>
+    </div>
+    <div class="nav_menu">
+      <a href="musical_now.html">뮤지컬</a>
+      <a href="#">연극</a>
+      <a href="#">공연장</a>
+      <a href="#">예매처</a>
+    </div>
+
+
+    <div class="nav_search">
+      <input type="text">
+      <button><img src="./search-interface-symbol.png" alt=""></button>
+    </div>
+
+    <div class="nav_member">
+      <a href="login.html">로그인</a>
+      <a href="member.html">회원가입</a>
+      <a href="mypage.html">마이페이지</a>
+    </div>
+  </nav>
+
+  <div class="muTitle">
+    <h1><a href="musical_now.html">뮤지컬</a></h1>
+  </div>
+
+  <div class="tabcontainer">
+  <div class="tabnavigation">
+    <ul>
+    <li id="tabnav_1">현재 상연중</li>
+    <li id="tabnav_2">상연 예정</li>
+    <li id="tabnav_3">종료된 공연</li>
+    <li id="tabnav_4">랭킹</li>
+    <li id="tabnav_5">후기</li>
+    </ul>
+  </div>
+
+<div class="tabpages">
+  <div class="tabpage" id="tabpage_1">
+    <table>
+      <tr>
+        <td>순위</td>
+        <td></td>
+        <td>작품명</td>
+        <td>상영기간</td>
+        <td>좋아요</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td><a href="mus_detail.html"><img src="./play001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+    </table>
+<div class="morebtn">
+    <a href="#">+더보기</a>
+  </div>
+  </div>
+
+  <div class="tabpage" id="tabpage_2">
+    <table>
+      <tr>
+        <td>순위</td>
+        <td></td>
+        <td>작품명</td>
+        <td>상영기간</td>
+        <td>좋아요</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+    </table>
+<div class="morebtn">
+    <a href="#">+더보기</a>
+  </div>
+  </div>
+
+  <div  class="tabpage" id="tabpage_3">
+    <table>
+      <tr>
+        <td>순위</td>
+        <td></td>
+        <td>작품명</td>
+        <td>상영기간</td>
+        <td>좋아요</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+    </table>
+<div class="morebtn">
+    <a href="#">+더보기</a>
+  </div>
+  </div>
+
+  <div class="tabpage" id="tabpage_4">
+    <table>
+      <tr>
+        <td>순위</td>
+        <td></td>
+        <td>작품명</td>
+        <td>상영기간</td>
+        <td>좋아요</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td><a href="mus_detail.html"><img src="../mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+    </table>
+<div class="morebtn">
+    <a href="#">+더보기</a>
+  </div>
+  </div>
+
+  <div class="tabpage" id="tabpage_5">
+    <table>
+      <tr>
+        <td>순위</td>
+        <td></td>
+        <td>작품명</td>
+        <td>상영기간</td>
+        <td>좋아요</td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td><a href="mus_detail.html"><img src="./mus001.jpg" class="rankpo"></a></td>
+        <td>OOO</td>
+        <td>20xx.xx.xx.<br/>~20xx.xx.xx.</td>
+        <td>♥ nnn</td>
+      </tr>
+    </table>
+<div class="morebtn">
+    <a href="#">+더보기</a>
+  </div>
+  </div>
+
+</div>
+</div>
+
+  <footer>
+    <div class="footer_info">
+      <ul>
+        <li>
+          <a href="#">공지사항</a>|
+          <a href="#">서비스이용약관</a>|
+          <a href="#">개인정보처리방침</a>
+        </li>
+        <li>copyright&copy;2022 by jeyy2</li>
+      </ul>
+    </div>
+  </footer>
+  
+</body>
+</html>

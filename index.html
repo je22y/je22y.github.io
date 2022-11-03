@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M.P.A</title>
+  <link rel="stylesheet" href="./basic.css">
+  <link rel="stylesheet" href="./nav.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+
+  <style>
+   
+    .center {
+      width: 960px;
+      margin-top: 50px;
+    }
+
+    .center_now>h2 {
+      height: 50px;
+    }
+
+
+    .now_pl {
+      margin-top: 20px;
+    }
+
+    .now_mus>h3 {
+      height: 30px;
+    }
+
+    .now_pl>h3 {
+      height: 30px;
+    }
+
+    .center_will {
+      margin-top: 30px;
+    }
+
+    .center_will>h2 {
+      margin-top: 50px;
+      height: 50px;
+    }
+
+
+    .will_pl {
+      margin-top: 20px;
+    }
+
+    .will_mus>h3 {
+      height: 30px;
+    }
+
+    .will_pl>h3 {
+      height: 30px;
+    }
+
+    .center_all ul{
+      margin-top: 30px;
+      font-size: 20px;
+    }
+
+    .poster {
+      display: inline-block;
+      text-align: center;
+      width: 165px;
+      height: 220px;
+      vertical-align: middle;
+    }
+
+    .poster:hover{
+     opacity: 0.2;
+    }
+
+    .now_mupo {
+      width: 930px;
+      height: 250px;
+      line-height: 250px;
+      padding-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(143, 27, 27);
+    }
+    
+    
+
+    .now_plpo {
+      width: 930px;
+      height: 250px;
+      line-height: 250px;
+      padding-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(78, 78, 78);
+    }
+
+    .will_mupo {
+      width: 930px;
+      height: 250px;
+      line-height: 250px;
+      padding-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(143, 27, 27);
+    }
+
+
+    .will_plpo {
+      width: 930px;
+      height: 250px;
+      line-height: 250px;
+      padding-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(78, 78, 78);
+    }
+
+    .center_all {
+      width: 960px;
+      height: 200px;
+      margin-top: 50px;
+    }
+
+    footer {
+      width: 960px;
+      height: 50px;
+      border-top: 1px solid gray;
+      padding: 15px
+    }
+
+    .btn{
+      width: 30px;
+      height: 30px;
+      margin-top: 115px;
+    }
+    
+
+
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">
+    <div class="titleimg">
+      <img src="./tickets.png">
+    </div>
+  </a>
+  
+    <div class="nav_title">
+      <h1><a href="index.html">음파 M.P.A</a></h1>
+    </div>
+    <div class="nav_menu">
+      <a href="musical_now.html">뮤지컬</a>
+      <a href="#">연극</a>
+      <a href="#">공연장</a>
+      <a href="#">예매처</a>
+    </div>
+
+
+    <div class="nav_search">
+      <input type="text"> 
+      <button><img src="./search-interface-symbol.png" alt=""></button>
+      </div>
+      
+
+    <div class="nav_member">
+      <a href="login.html">로그인</a>
+      <a href="member.html">회원가입</a>
+      <a href="mypage.html">마이페이지</a>
+    </div>
+  </nav>
+
+
+  <div class="center">
+    <div class="center_now">
+      <h2>현재 상연작</h2>
+      <div class="now_mus">
+        <h3><a href="musical_now.html">뮤지컬</a></h3>
+
+        <div class="now_mupo">
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <input class="btn" type="button" value="→">
+        </div>
+
+      </div>
+
+      <div class="now_pl">
+        <h3><a href="#">연극</a></h3>
+
+        <div class="now_plpo">
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <input class="btn" type="button" value="→">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="center_will">
+      <h2>상연 예정작</h2>
+      <div class="will_mus">
+        <h3><a href="#">뮤지컬</a></h3>
+
+        <div class="will_mupo">
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <div><a href="mus_detail.html"><img class="poster" src="./mus001.jpg"></a></div>
+          <input class="btn" type="button" value="→">
+        </div>
+
+      </div>
+
+      <div class="will_pl">
+        <h3><a href="#">연극</a></h3>
+
+        <div class="will_plpo">
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <div><a href="#"><img class="poster" src="./play001.jpg"></a></div>
+          <input class="btn" type="button" value="→">
+        </div>
+      </div>
+
+      <div class="center_all">
+        <h2>전체 랭킹</h2>
+        <ul>
+          <li><a href="#">뮤지컬↗</a></li><br>
+          <li><a href="#">연극↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="footer_info">
+        <ul>
+          <li>
+            <a href="#">공지사항</a>|
+            <a href="#">서비스이용약관</a>|
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li>copyright&copy;2022 by jeyy2</li>
+        </ul>
+      </div>
+    </footer>
+
+</body>
+
+</html>

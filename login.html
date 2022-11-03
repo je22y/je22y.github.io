@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="./basic.css">
+</head>
+  <style>
+    
+    body{
+      width: 960px;
+    }
+
+    .log{
+      width: 400px;
+      height: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -200px;
+      margin-top: -150px;
+    }
+
+    .home{
+      width: 400px;
+      text-align: center;
+    }
+
+    .input{
+      width: 300px;
+      height: 30px;
+      font-size: 20px;
+    }
+
+    .title{
+      width: 20px;
+    }
+
+    #logbtn{
+      width: 305px;
+      height: 30px;
+      color: rgb(235, 235, 235);
+    background-color: rgb(54, 54, 54);
+    }
+
+   .idpwd{
+    margin-top: 20px;
+    margin-left: 90px;
+   }
+
+    table{
+      margin-top: 30px;
+      font-size: 20px;
+
+    }
+
+  </style>
+
+<body>
+  <div class="log">
+  <div class="home"> <h1><a href="index.html">음파 M.P.A</a></h1></div>
+<form action="">
+  <table>
+    <tr>
+      <td><label for="userId" class="title">아이디</label></td>
+      <td><input type="text" class="input" id="userId" required></td>
+    </tr>
+
+    <tr>
+      <td><label for="pwd" class="title">비밀번호</label></td>
+      <td><input type="text" class="input" id="pwd" required></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><input type="submit" class="input" id="logbtn" value="로그인"></td>
+    </tr>
+  </table>
+</form>
+  
+  <div class="idpwd">
+  <input type="checkbox" class="input_cb" id="remainId"><label for="remainId">아이디 저장</label><br>
+
+  <a href="#">아이디 찾기</a>&nbsp;|
+  <a href="#">비밀번호 찾기</a>&nbsp;|
+  <a href="member.html">회원가입</a>
+</div>
+</div>
+</body>
+</html>
